@@ -20,27 +20,27 @@ const IndexPage = () => {
             style={{ backgroundImage: `url(${ManLaptop})` }}
             className={`h-[600px] w-full bg-center bg-no-repeat bg-cover`}
           >
-            <div className='flex flex-col justify-center items-center w-full h-full bg-black bg-opacity-40 text-white'>
-              <h1 className='text-4xl'>
+            <div className='flex flex-col justify-center items-center w-full h-full bg-black bg-opacity-40 text-white '>
+              <h1 className='text-3xl lg:text-4xl text-center px-8'>
                 Accessible design is good design. You can count on us.
               </h1>
-              <div className='text-center my-6 text-lg'>
+              <div className='text-center my-6 text-lg w-full px-8 lg:w-2/3'>
                 <h2>
                   Everybody knows design and style should work toward making you
-                  look good and feel <br /> good without a lot of effort so you
-                  can get on with the things that matter.
+                  look good and feel good without a lot of effort so you can get
+                  on with the things that matter.
                 </h2>
               </div>
               <Button />
             </div>
           </section>
-          <section className='bg-white flex flex-col justify-center items-center h-80'>
+          <section className='bg-white flex flex-col justify-center items-center lg:h-80 py-8'>
             <img
               src='https://www.metaltoad.com/sites/default/files/styles/large_personal_photo_870x500_/public/2020-05/react-js-blog-header.png?itok=VbfDeSgJ'
               alt='Logo'
-              className='h-16'
+              className='h-16 mb-4'
             />
-            <p className='w-2/4 text-center text-slate-500'>
+            <p className='w-full px-8 lg:w-2/4 text-center text-slate-500'>
               “ Your work is going to fill a large part of your life, and the
               only way to be truly satisfied is to do what you believe is great
               work. And the only way to do great work is to love what you do. If
@@ -50,7 +50,7 @@ const IndexPage = () => {
           </section>
           <section>
             <TwoSqaureSection>
-              <div className='flex flex-col w-1/2 h-[30rem] overflow-hidden justify-center items-center relative'>
+              <div className='flex flex-col md:w-1/2 h-[30rem] overflow-hidden justify-center items-center relative'>
                 <img
                   src={BannerImage}
                   alt=''
@@ -58,7 +58,7 @@ const IndexPage = () => {
                 />
                 <div className='w-full h-full bg-black bg-opacity-40 absolute' />
               </div>
-              <div className='flex flex-col w-1/2 h-full min-h-[30rem] justify-center items-center bg-center relative bg-slate-200'>
+              <div className='flex flex-col md:w-1/2 h-full min-h-[30rem] justify-center items-center bg-center relative bg-slate-200'>
                 <div className='w-5/6'>
                   <h2 className='text-3xl mb-4 text-slate-600'>
                     Vivamus malesuada ipsum nibh ligula saepe eveniet praesent.
@@ -77,7 +77,7 @@ const IndexPage = () => {
             </TwoSqaureSection>
           </section>
           <section>
-            <TwoSqaureSection>
+            <TwoSqaureSection className={'flex-col-reverse md:flex-row'}>
               <div className='flex w-full h-full min-h-[30rem] justify-center items-center bg-center relative bg-slate-200'>
                 <div className='w-5/6'>
                   <h2 className='text-3xl mb-4 text-slate-600'>
