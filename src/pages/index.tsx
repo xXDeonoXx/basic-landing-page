@@ -20,6 +20,7 @@ const IndexPage = () => {
       >
         <Layout>
           <section
+            id='início'
             style={{ backgroundImage: `url(${ManLaptop})` }}
             className={`h-[600px] w-full bg-center bg-no-repeat bg-cover`}
           >
@@ -37,7 +38,10 @@ const IndexPage = () => {
               <StyledLink />
             </div>
           </section>
-          <section className='bg-white flex flex-col justify-center items-center lg:h-80 py-8'>
+          <section
+            id='sobre'
+            className='bg-white flex flex-col justify-center items-center lg:h-80 py-8'
+          >
             <img
               src='https://placeholderlogo.com/img/placeholder-logo-4.png'
               alt='Logo'
@@ -51,7 +55,7 @@ const IndexPage = () => {
               em projetos de prototipagem de um dia.
             </p>
           </section>
-          <section>
+          <section id='seção-1'>
             <TwoSqaureSection>
               <div className='flex flex-col md:w-1/2 h-[30rem] overflow-hidden justify-center items-center relative'>
                 <img
@@ -79,7 +83,10 @@ const IndexPage = () => {
             </TwoSqaureSection>
           </section>
 
-          <section className='bg-white flex flex-col justify-center items-center lg:h-[28rem] py-8 text-slate-600'>
+          <section
+            id='serviços'
+            className='bg-white flex flex-col justify-center items-center lg:h-[28rem] py-8 text-slate-600'
+          >
             <h2 className='text-bold text-4xl '>Nossos serviços</h2>
             <p className='w-full p-4 lg:w-2/4 text-center text-slate-500'>
               Alguns dos serviços que disponibilizamos
@@ -111,7 +118,7 @@ const IndexPage = () => {
             </div>
           </section>
 
-          <section>
+          <section id='seção-2'>
             <TwoSqaureSection className={'flex-col-reverse md:flex-row'}>
               <div className='flex w-full h-full min-h-[30rem] justify-center items-center bg-center relative bg-slate-200'>
                 <div className='w-5/6'>
@@ -139,7 +146,10 @@ const IndexPage = () => {
               </div>
             </TwoSqaureSection>
           </section>
-          <section className='text-white h-[30rem] bg-black bg-opacity-40 flex flex-col justify-center items-center'>
+          <section
+            id='se-inscreva'
+            className='text-white h-[30rem] bg-black bg-opacity-40 flex flex-col justify-center items-center'
+          >
             <h1 className='text-3xl px-8 md:text-4xl md:w-96 text-center'>
               Se inscreva hoje e fique por dentro do lançamento!
             </h1>

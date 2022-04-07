@@ -5,11 +5,12 @@ export const NavBar = () => {
   const [onTop, setOnTop] = useState(true);
   const [showSideMenu, setShowSideMenu] = useState(false);
   const links = [
-    { label: 'Início', url: '' },
-    { label: 'Seção 1', url: '' },
-    { label: 'Serviços', url: '' },
-    { label: 'Seção 2', url: '' },
-    { label: 'Se inscreva', url: '' },
+    { label: 'Início', url: '#início' },
+    { label: 'Sobre', url: '#sobre' },
+    { label: 'Seção 1', url: '#seção-1' },
+    { label: 'Serviços', url: '#serviços' },
+    { label: 'Seção 2', url: '#seção-2' },
+    { label: 'Se inscreva', url: '#se-inscreva' },
   ];
 
   const onScroll = () => {
@@ -71,6 +72,9 @@ export const NavBar = () => {
                   index !== links.length - 1 && 'mr-8'
                 } w-full border p-2`}
                 href={link.url}
+                onClick={() => {
+                  setShowSideMenu(false);
+                }}
               >
                 {link.label}
               </a>
