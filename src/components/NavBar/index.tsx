@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import MenuIcon from '../../images/icons/menu.svg';
 
 export const NavBar = () => {
   const [onTop, setOnTop] = useState(true);
+  const [showSideMenu, setShowSideMenu] = useState(false);
   const links = [
-    { label: 'Home', url: '' },
-    { label: 'Overview', url: '' },
-    { label: 'Showcase', url: '' },
-    { label: 'Team', url: '' },
-    { label: 'Subscribe', url: '' },
+    { label: 'Início', url: '' },
+    { label: 'Seção 1', url: '' },
+    { label: 'Serviços', url: '' },
+    { label: 'Seção 2', url: '' },
+    { label: 'Se inscreva', url: '' },
   ];
 
   const onScroll = () => {
@@ -28,15 +30,23 @@ export const NavBar = () => {
   return (
     <nav
       className={`${!onTop && 'bg-black bg-opacity-60'}
-    h-20 w-full flex items-center justify-between px-8 fixed transition-all delay-100 duration-300 z-40
+    h-20 w-full flex items-center justify-between px-4 md:px-8 fixed transition-all delay-100 duration-300 z-40
     `}
     >
       <img
-        src='https://www.metaltoad.com/sites/default/files/styles/large_personal_photo_870x500_/public/2020-05/react-js-blog-header.png?itok=VbfDeSgJ'
+        src='https://placeholderlogo.com/img/placeholder-logo-4.png'
         alt='Logo'
         className='h-16'
       />
-      <div className='text-white flex'>
+      <div
+        className={`p-2 block md:hidden`}
+        onClick={() => {
+          setShowSideMenu(true);
+        }}
+      >
+        <img src={MenuIcon} alt='' className='h-8 text-white fill-white' />
+      </div>
+      <div className='text-white hidden md:flex'>
         {links.map((link, index) => {
           return (
             <a
@@ -47,6 +57,34 @@ export const NavBar = () => {
             </a>
           );
         })}
+      </div>
+      <div
+        className={`${
+          !showSideMenu ? 'w-0 delay-100' : 'w-full'
+        } block md:hidden  absolute transition-all duration-100 w-full h-screen inset-0 overflow-hidden`}
+      >
+        <div className=' bg-slate-100 inset-0 w-2/3 h-screen absolute delay-500 z-10 flex flex-col'>
+          {links.map((link, index) => {
+            return (
+              <a
+                className={`${
+                  index !== links.length - 1 && 'mr-8'
+                } w-full border p-2`}
+                href={link.url}
+              >
+                {link.label}
+              </a>
+            );
+          })}
+        </div>
+        <div
+          onClick={() => {
+            setShowSideMenu(false);
+          }}
+          className={`${
+            !showSideMenu ? 'opacity-0' : 'opacity-100 delay-100'
+          } w-full h-full bg-black bg-opacity-50 z-50 transition-all duration-100 `}
+        />
       </div>
     </nav>
   );
